@@ -1,5 +1,8 @@
 ---
 icon: /assets/logo.png
+
+meta:
+  title: "Welcome! | Team Diopside Docs"
 ---
 
 # Team Diopside Documentation

@@ -12,5 +12,5 @@ In the `assets` folder, create a folder with the name of the mod ID of the mod y
 For example, such a folder structure could be `assets/supplementaries/seamless_rules`.
 
 !!! 
-Don't know what the mod ID is? Look at the text before the ":" when hovering over the Leaves block with Advanced Tooltips enabled. 
+Don't know what the mod ID is? Look at the text before the ":" when hovering over the item with Advanced Tooltips enabled. 
 !!!

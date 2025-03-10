@@ -9,7 +9,7 @@ icon: tools
 
 +++ 2.6.0+
 
-In order to not destroy any trees in custom biomes, Separated Leaves does not separate leaves in unknown biomes. Separated Leaves only works in biomes using a namespace that have registered at least one rule. This means that if a mod adds a biome without modifying any trees, the biomes won't get recognized by Separated Leaves. To fix this, add an empty rule.
+In order to not destroy any trees in custom biomes, Separated Leaves does not separate leaves in unknown biomes. Separated Leaves only works in biomes using a namespace that have registered at least one rule. This means that if a mod only adds biomes with existing trees, the biomes won't get recognized by Separated Leaves as there are no rules regarding custom trees. To fix this, add an empty rule.
 
 ```json /[namespace]/separated_leaves/biomes.json
 {
@@ -50,6 +50,10 @@ In version `2.5.0`, a `biome.json` file is required for the mod to work.
 
 +++
 
-## Structures (1.19+)
+## Structures
+
+!!!
+The structure tag is available since version `2.3.0`
+!!!
 
 Structures with custom trees may break when using the mod. If this is the case for a certain structure, add it to the tag `data/separated_leaves/tags/worldgen/structure/allow_mismatched_leaves.json`.

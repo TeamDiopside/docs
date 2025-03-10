@@ -4,7 +4,7 @@ output: .retype
 url: docs.teamdiopside.nl
 
 branding:
-  title: Team Diopside Docs
+  title: Team Diopside
   # label: Docs
   logo: assets/logo.png
 
@@ -14,20 +14,20 @@ links:
   icon: globe
   target: blank
 - text: Modrinth
-  link: https://teamdiopside.nl
+  link: https://modrinth.com/collection/Sh6meNmq
   icon: assets/modrinth.png
   target: blank
-- text: Curseforge
-  link: https://teamdiopside.nl
+- text: CurseForge
+  link: https://www.curseforge.com/members/team_diopside/projects
   icon: assets/curseforge.png
   target: blank
 - text: GitHub
-  link: https://teamdiopside.nl
+  link: https://github.com/TeamDiopside
   icon: mark-github
   target: blank
 
 footer:
-  copyright: "&copy; Copyright {{ year }}. All rights reserved."
+  copyright: "&copy; Copyright {{ year }} [Team Diopside](https://teamdiopside.nl). All rights reserved."
 
 markdown:
   lineBreaks: hard
