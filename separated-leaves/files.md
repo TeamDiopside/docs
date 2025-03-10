@@ -1,6 +1,5 @@
 ---
 order: B
-label: Files
 icon: file
 ---
 

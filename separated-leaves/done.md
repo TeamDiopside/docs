@@ -1,6 +1,5 @@
 ---
 order: D
-label: Done
 icon: checkbox
 ---
 

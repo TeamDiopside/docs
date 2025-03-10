@@ -1,6 +1,5 @@
 ---
 order: A
-label: Creating a pack
 icon: plus-circle
 ---
 
