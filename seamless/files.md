@@ -53,7 +53,7 @@ You can specify more than one state too, for example:
 ```
 
 !!!
-Creating these files can get quite time consuming, so the next page lists some shortcuts you can use.  
+Creating these files can get quite time consuming, so the next page lists some shortcuts to make your life easier.  
 !!!
 
 ## Recursion
