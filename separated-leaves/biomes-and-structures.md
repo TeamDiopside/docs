@@ -18,7 +18,9 @@ In order to not destroy any trees in custom biomes, Separated Leaves does not se
 }
 ```
 
-This way, all leaves in custom biomes of the namespace will work correctly
+This way, all leaves in custom biomes of the namespace will work correctly.
+
+If you wish to blacklist a biome, you can add it to the tag `data/separated_leaves/tags/worldgen/biome/allow_mismatched_leaves.json`.
 
 +++ 2.5.0
 
