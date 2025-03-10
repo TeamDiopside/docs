@@ -11,4 +11,6 @@ If the rules don't work, your logs should contain error messages describing what
 
 ***If you end up making a pack, please let us know! We could include it in the mod :)***
 
+---
+
 [!ref icon="/assets/logo.png"](/)

@@ -15,4 +15,6 @@ Configure your own trees by creating a simple data pack for Separated Leaves!
 
 [!ref icon="checkbox"](/separated-leaves/done.md)
 
+---
+
 [!ref icon="/assets/logo.png"](/)
