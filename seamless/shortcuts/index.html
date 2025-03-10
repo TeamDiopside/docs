@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Done | Team Diopside Docs</title>
-    <meta name="title" content="Done | Team Diopside Docs">
-    <meta name="description" content="That should be it! If you did it properly, your game logs will include your files when entering a world or running ">
+    <title>Shortcuts | Team Diopside Docs</title>
+    <meta name="title" content="Shortcuts | Team Diopside Docs">
+    <meta name="description" content="Sometimes, if there are many blockstates, many files are needed.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.teamdiopside.nl/separated-leaves/done/">
+    <link rel="canonical" href="https://docs.teamdiopside.nl/seamless/shortcuts/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.teamdiopside.nl/separated-leaves/done/">
-    <meta property="og:title" content="Done | Team Diopside Docs">
-    <meta property="og:description" content="That should be it! If you did it properly, your game logs will include your files when entering a world or running ">
+    <meta property="og:url" content="https://docs.teamdiopside.nl/seamless/shortcuts/">
+    <meta property="og:title" content="Shortcuts | Team Diopside Docs">
+    <meta property="og:description" content="Sometimes, if there are many blockstates, many files are needed.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.teamdiopside.nl/separated-leaves/done/">
-    <meta property="twitter:title" content="Done | Team Diopside Docs">
-    <meta property="twitter:description" content="That should be it! If you did it properly, your game logs will include your files when entering a world or running ">
+    <meta property="twitter:url" content="https://docs.teamdiopside.nl/seamless/shortcuts/">
+    <meta property="twitter:title" content="Shortcuts | Team Diopside Docs">
+    <meta property="twitter:description" content="Sometimes, if there are many blockstates, many files are needed.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -36,6 +36,7 @@
     <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.794937682284" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.794937682284" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.794937682284" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -226,28 +227,90 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="done" class="break-words">
+<doc-anchor-target id="shortcuts" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#done">#</doc-anchor-trigger>
-        <span>Done</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#shortcuts">#</doc-anchor-trigger>
+        <span>Shortcuts</span>
     </h1>
 </doc-anchor-target>
-<p>That should be it! If you did it properly, your game logs will include your files when entering a world or running <code v-pre>/reload</code>.</p>
-<p>You can also use <a href="https://github.com/unilock">Unilock</a>&#x27;s <a href="https://gist.github.com/unilock/a1396e3b52d8ff2109b9bb7a454d315a#file-run-py">Python script</a> to generate your files!</p>
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <img width="20" src="../../assets/logo.png">
-        </span>
-        <span class="inline-block font-medium ml-2">Team Diopside Documentation</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../../</span>
-    </div>
-    <a href="../../" class="absolute block inset-0"></a>
-</div>
-</p>
+<p>Sometimes, if there are many blockstates, many files are needed. To avoid having to make tons of almost identical files, there is some handy stuff you can use to make things much easier.</p>
+<doc-anchor-target id="excluding-blocks">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#excluding-blocks">#</doc-anchor-trigger>
+        <span>Excluding Blocks</span>
+    </h2>
+</doc-anchor-target>
+<p>Sometimes, a tag might contain exceptions, so you need to exclude blocks from it. This is done by putting an exclamation mark in front of the block you want to exclude.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">&quot;blocks&quot;: [&quot;#c:chests&quot;, &quot;!minecraft:ender_chest&quot;]</code></pre>
+</doc-codeblock></div>
+<p>You can exclude entire tags too.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">&quot;blocks&quot;: [&quot;#minecraft:buttons&quot;, &quot;!#minecraft:wooden_buttons&quot;]</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="directions">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#directions">#</doc-anchor-trigger>
+        <span>Directions</span>
+    </h2>
+</doc-anchor-target>
+<p>In the <code v-pre>directions</code> list, instead of specifying an explicit direction like <code v-pre>north</code>, you can work with the sate of the targeted block. The blockstate property has to be a directional property, like <code v-pre>facing</code> or <code v-pre>axis</code>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">&quot;directions&quot;: [&quot;/state:facing&quot;]</code></pre>
+</doc-codeblock></div>
+<p>This makes Seamless only search for matches in the direction that the block itself is facing.</p>
+<p>You can use the opposite of the direction as well, north would become south and up would become down.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">&quot;directions&quot;: [&quot;/state:facing+opposite&quot;]</code></pre>
+</doc-codeblock></div>
+<p>Instead of <code v-pre>opposite</code>, you can use numbers as well, for horizontal directions. The value represents the amount of clockwise rotations, <code v-pre>north</code> -&gt; <code v-pre>east</code> -&gt; <code v-pre>south</code> -&gt; <code v-pre>west</code> -&gt; <code v-pre>north</code>. Rotating twice would have the same effect as <code v-pre>opposite</code>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">&quot;directions&quot;: [&quot;/state:facing+3&quot;]</code></pre>
+</doc-codeblock></div>
+<p>Rotating and opposite do not work with axis properties.</p>
+<doc-anchor-target id="blocks">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#blocks">#</doc-anchor-trigger>
+        <span>Blocks</span>
+    </h2>
+</doc-anchor-target>
+<p>If you use tags or multiple blocks in the <code v-pre>blocks</code> list, you may not want to make them all connect to each other, but only to their own block. In the <code v-pre>connecting_blockstates</code> list, you can do exactly that.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">&quot;connecting_blocks&quot;: [&quot;/same&quot;]</code></pre>
+</doc-codeblock></div>
+<p>For example, I want to make all wool blocks connect to each other, but only to their own color. I could make 16 files for every color, but this is much easier.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;blocks&quot;: [&quot;#minecraft:wool&quot;],
+  &quot;directions&quot;: [&quot;north&quot;, &quot;east&quot;, &quot;south&quot;, &quot;west&quot;, &quot;up&quot;, &quot;down&quot;],
+  &quot;connecting_blocks&quot;: [&quot;/same&quot;]
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="blockstates">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#blockstates">#</doc-anchor-trigger>
+        <span>Blockstates</span>
+    </h2>
+</doc-anchor-target>
+<p>Just like with <code v-pre>connecting_blocks</code>, you can use <code v-pre>/same</code> in the <code v-pre>connecting_blockstates</code> object too. The outlines will only connect if the state is the same, or not the same, with <code v-pre>/!same</code>. In the example below, <code v-pre>facing</code> has to be the same and <code v-pre>part</code> has to be different.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">&quot;connecting_blockstates&quot;: {
+  &quot;facing&quot;: [&quot;/same&quot;],
+  &quot;part&quot;: [&quot;/!same&quot;]
+}</code></pre>
+</doc-codeblock></div>
+<p>If a blockstate property returns a direction or number, like <code v-pre>facing</code> or <code v-pre>age</code>, you can add things after a &quot;+&quot; just like in the <code v-pre>directions</code> list.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">// adding one
+&quot;age&quot;: [&quot;/same+1&quot;]
+// subtracting two
+&quot;age&quot;: [&quot;/same+-2&quot;]
+
+// rotating clockwise once and twice
+&quot;facing&quot;: [&quot;/same+1&quot;, &quot;/same+2&quot;]
+// the opposite
+&quot;facing&quot;: [&quot;/same+opposite&quot;]</code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -257,16 +320,23 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../separated-leaves/biomes-and-structures/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../seamless/files/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Biomes & Structures</span>
+                                                <span class="block mt-1">Files</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../seamless/examples/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Examples</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -307,6 +377,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Done", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Shortcuts", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

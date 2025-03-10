@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Done | Team Diopside Docs</title>
-    <meta name="title" content="Done | Team Diopside Docs">
-    <meta name="description" content="That should be it! If you did it properly, your game logs will include your files when entering a world or running ">
+    <title>Files | Team Diopside Docs</title>
+    <meta name="title" content="Files | Team Diopside Docs">
+    <meta name="description" content="Inside of the folder you just created, we are going to add JSON files for different outline rules.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.teamdiopside.nl/separated-leaves/done/">
+    <link rel="canonical" href="https://docs.teamdiopside.nl/seamless/files/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.teamdiopside.nl/separated-leaves/done/">
-    <meta property="og:title" content="Done | Team Diopside Docs">
-    <meta property="og:description" content="That should be it! If you did it properly, your game logs will include your files when entering a world or running ">
+    <meta property="og:url" content="https://docs.teamdiopside.nl/seamless/files/">
+    <meta property="og:title" content="Files | Team Diopside Docs">
+    <meta property="og:description" content="Inside of the folder you just created, we are going to add JSON files for different outline rules.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.teamdiopside.nl/separated-leaves/done/">
-    <meta property="twitter:title" content="Done | Team Diopside Docs">
-    <meta property="twitter:description" content="That should be it! If you did it properly, your game logs will include your files when entering a world or running ">
+    <meta property="twitter:url" content="https://docs.teamdiopside.nl/seamless/files/">
+    <meta property="twitter:title" content="Files | Team Diopside Docs">
+    <meta property="twitter:description" content="Inside of the folder you just created, we are going to add JSON files for different outline rules.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -36,6 +36,7 @@
     <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.794937682284" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.794937682284" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.794937682284" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -226,28 +227,81 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="done" class="break-words">
+<doc-anchor-target id="files" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#done">#</doc-anchor-trigger>
-        <span>Done</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#files">#</doc-anchor-trigger>
+        <span>Files</span>
     </h1>
 </doc-anchor-target>
-<p>That should be it! If you did it properly, your game logs will include your files when entering a world or running <code v-pre>/reload</code>.</p>
-<p>You can also use <a href="https://github.com/unilock">Unilock</a>&#x27;s <a href="https://gist.github.com/unilock/a1396e3b52d8ff2109b9bb7a454d315a#file-run-py">Python script</a> to generate your files!</p>
-<p>
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <img width="20" src="../../assets/logo.png">
-        </span>
-        <span class="inline-block font-medium ml-2">Team Diopside Documentation</span>
+<p>Inside of the folder you just created, we are going to add JSON files for different outline rules. These rules define how outlines of different blocks merge if they are next to each other.</p>
+<p>An outline rule in its simplest form looks like this:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">/minecraft/seamless_rules/sunflower.json</div>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;blocks&quot;: [&quot;minecraft:sunflower&quot;],
+  &quot;directions&quot;: [&quot;up&quot;, &quot;down&quot;],
+  &quot;connecting_blocks&quot;: [&quot;minecraft:sunflower&quot;]
+}</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>First we have the <code v-pre>blocks</code> list. This is where you put all blocks (or tags) that apply to this rule. Think of this as the block you are looking at.</li>
+<li>The <code v-pre>connecting_blocks</code> list specifies which blocks (or tags) should be able to connect with the blocks in the <code v-pre>blocks</code> list.</li>
+<li>The <code v-pre>directions</code> list contains all directions in which the rule should work. This can be <code v-pre>north</code>, <code v-pre>east</code>, <code v-pre>south</code>, <code v-pre>west</code>, <code v-pre>up</code> and <code v-pre>down</code>.</li>
+</ul>
+<p>The file name can be whatever you want, but it would make sense to describe the rule.</p>
+<doc-anchor-target id="blockstates">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#blockstates">#</doc-anchor-trigger>
+        <span>Blockstates</span>
+    </h2>
+</doc-anchor-target>
+<p>Optionally, you can specify blockstates too:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">/minecraft/seamless_rules/door_upper.json</div>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;blocks&quot;: [&quot;#minecraft:doors&quot;],
+  &quot;blockstates&quot;: {
+    &quot;half&quot;: [&quot;upper&quot;]
+  },
+  &quot;directions&quot;: [&quot;down&quot;],
+  &quot;connecting_blocks&quot;: [&quot;#minecraft:doors&quot;],
+  &quot;connecting_blockstates&quot;: {
+    &quot;half&quot;: [&quot;lower&quot;]
+  }
+}</code></pre>
+</doc-codeblock></div>
+<p>This means: any block in <code v-pre>#doors</code> with a state of <code v-pre>upper</code> for the property <code v-pre>half</code>, will connect to any block in <code v-pre>#doors</code> with a state of <code v-pre>lower</code> for the property <code v-pre>half</code>.</p>
+<p>You can specify more than one state too, for example:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">&quot;blockstates&quot;: {
+  &quot;age&quot;: [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;],
+  &quot;half&quot;: [&quot;lower&quot;]
+}</code></pre>
+</doc-codeblock></div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Creating these files can get quite time consuming, so the next page lists some shortcuts you can use.</p>
+        </div>
     </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>../../</span>
-    </div>
-    <a href="../../" class="absolute block inset-0"></a>
 </div>
-</p>
+<doc-anchor-target id="recursion">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#recursion">#</doc-anchor-trigger>
+        <span>Recursion</span>
+    </h2>
+</doc-anchor-target>
+<p>When looking at a block and a match is found, Seamless will check the connecting block for other connecting blocks. This could go on forever! Keep this in mind, as you will often need to create outline rules that are more specific, to keep the outlines from spreading to disconnected blocks.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -257,16 +311,23 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../separated-leaves/biomes-and-structures/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../seamless/creating/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Biomes & Structures</span>
+                                                <span class="block mt-1">Creating a pack</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../seamless/shortcuts/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Shortcuts</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -307,6 +368,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Done", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Files", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
