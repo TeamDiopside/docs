@@ -1,12 +1,41 @@
 input: .
 output: .retype
+
 url: docs.teamdiopside.nl
+
 branding:
   title: Team Diopside Docs
-  label: Docs
+  # label: Docs
   logo: assets/logo.png
+
 links:
 - text: Website
   link: https://teamdiopside.nl
+  icon: globe
+  target: blank
+- text: Modrinth
+  link: https://teamdiopside.nl
+  icon: assets/modrinth.png
+  target: blank
+- text: Curseforge
+  link: https://teamdiopside.nl
+  icon: assets/curseforge.png
+  target: blank
+- text: GitHub
+  link: https://teamdiopside.nl
+  icon: mark-github
+  target: blank
+
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
+
+markdown:
+  lineBreaks: hard
+
+edit:
+  repo: "https://github.com/TeamDiopside/docs/"
+
+favicon: assets/logo.png
+
+meta:
+  title: " | Team Diopside Docs"

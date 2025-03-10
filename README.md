@@ -1,3 +1,2 @@
-# docs
+# Team Diopside Documentation
 
-blabla
