@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.794921192107">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.794922663869">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../assets/logo.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.794921192107" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.794922663869" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.794921192107" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.794922663869" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.794921192107" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.794921192107" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.794922663869" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.794922663869" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -239,6 +239,9 @@
         <span>Biomes</span>
     </h2>
 </doc-anchor-target>
+<doc-tabs>
+<doc-tab v-cloak id="2-6-0">
+<template #title>2.6.0+</template>
 <p>In order to not destroy any trees in custom biomes, Separated Leaves does not separate leaves in unknown biomes. Separated Leaves only works in biomes using a namespace that have registered at least one rule. This means that if a mod adds a biome without modifying any trees, the biomes won&#x27;t get recognized by Separated Leaves. To fix this, add an empty rule.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">/[namespace]/separated_leaves/biomes.json</div>
@@ -248,8 +251,9 @@
 }</code></pre>
 </doc-codeblock></div>
 <p>This way, all leaves in custom biomes of the namespace will work correctly</p>
-<doc-panel id="biomes-2-5-0-only" collapsed>
-    <template #title>Biomes (2.5.0 only)</template>
+</doc-tab>
+<doc-tab v-cloak id="2-5-0">
+<template #title>2.5.0</template>
 <p>For every namespace you add files for, you need to provide a <code v-pre>biomes.json</code> file alongside the other files. In there, you can specify which biomes should be added to the mod.</p>
 <p>If <code v-pre>all</code> is set to <code v-pre>true</code>, Separated Leaves will work in any biome with the namespace.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -285,7 +289,8 @@
         </div>
     </div>
 </div>
-</doc-panel>
+</doc-tab>
+</doc-tabs>
 <doc-anchor-target id="structures-119">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#structures-119">#</doc-anchor-trigger>
