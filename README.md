@@ -1,14 +1,5 @@
----
-icon: /assets/logo.png
+# Team Diopside Docs
 
-meta:
-  title: "Welcome! | Team Diopside Docs"
----
+This is the repository for our [Documentation website](https://docs.teamdiopside.nl).
 
-# Team Diopside Documentation
-
-Welcome to the Team Diopside Docs!
-
-[!ref icon="/assets/seamless.png"](/seamless)
-
-[!ref icon="/assets/separated-leaves.png"](/separated-leaves)
+The pages are made using [Retype](https://retype.com/).

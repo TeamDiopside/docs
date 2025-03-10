@@ -7,4 +7,4 @@ expanded: true
 
 Configure your own outlines by creating a simple resource pack for Seamless!
 
-
+[!ref icon="/assets/logo.png"](/)

@@ -1,6 +1,6 @@
 ---
 order: B
-icon: file
+icon: file-code
 ---
 
 # Files
@@ -22,4 +22,3 @@ Almost every mod has got tags for their log variants, but if such a tag does not
 !!!danger
 It is important to make separate files for every **tree**, not every **wood type**. Oak and Azalea leaves can both connect to Oak Logs, but for the best experience, they should not be able to connect to the wood through each other. Thus they should be split into two files.
 !!!
-
