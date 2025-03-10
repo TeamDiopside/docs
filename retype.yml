@@ -32,8 +32,8 @@ footer:
 markdown:
   lineBreaks: hard
 
-edit:
-  repo: "https://github.com/TeamDiopside/docs/"
+# edit:
+#   repo: "https://github.com/TeamDiopside/docs/"
 
 favicon: assets/logo.png
 
